@@ -225,13 +225,13 @@ class Search extends PureComponent {
         }).start(),
         this.props.keyboardShouldPersist === false
           ? Animated.timing(this.inputFocusPlaceholderAnimated, {
-              toValue: this.middleWidth - this.props.placeholderCollapsedMargin,
+              toValue: this.props.placeholderCollapsedMargin + 10,
               duration: 200
             }).start()
           : null,
         this.props.keyboardShouldPersist === false || isForceAnim === true
           ? Animated.timing(this.iconSearchAnimated, {
-              toValue: this.middleWidth - this.props.searchIconCollapsedMargin,
+              toValue: this.props.searchIconCollapsedMargin - 15,
               duration: 200
             }).start()
           : null,
