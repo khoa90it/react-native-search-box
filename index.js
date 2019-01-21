@@ -408,7 +408,7 @@ const getStyles = (inputHeight, isRtl) => {
       textAlign: isRtl ? 'right' : 'left',
       borderColor: '#444',
       backgroundColor: '#f7f7f7',
-      borderRadius: 5,
+      borderRadius: containerHeight/2,
       fontSize: 13
     },
     placeholderColor: 'grey',
