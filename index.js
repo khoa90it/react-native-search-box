@@ -129,9 +129,11 @@ class Search extends PureComponent {
     this.props.beforeFocus && (await this.props.beforeFocus());
     this.refs.input_keyword._component.isFocused &&
       (await this.refs.input_keyword._component.focus());
-    await this.setState(prevState => {
-      return { expanded: !prevState.expanded };
-    });
+    if (this.state.expanded === false){
+        await this.setState(prevState => {
+            return { expanded: !prevState.expanded };
+        });
+    }
     await this.expandAnimation();
     this.props.onFocus && (await this.props.onFocus(this.state.keyword));
     this.props.afterFocus && (await this.props.afterFocus());
